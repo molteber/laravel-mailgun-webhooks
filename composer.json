@@ -1,0 +1,52 @@
+{
+  "name": "puz/laravel-mailgun-webhooks",
+  "description": "Handle Mailgun webhooks in a Laravel applications",
+  "keywords": [
+    "mailgun",
+    "puz",
+    "laravel-mailgun",
+    "laravel-mailwun-webhooks"
+  ],
+  "homepage": "https://github.com/molteber/puz-laravel-mailgun-webhooks",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Morten Mehus",
+      "email": "contact@mortenmehus.no",
+      "homepage": "https://mortenmehus.no",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "illuminate/support": "^6.0",
+    "spatie/laravel-webhook-client": "^2.2"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^4.0",
+    "phpunit/phpunit": "^8.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Puz\\MailgunWebhooks\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Puz\\MailgunWebhooks\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Puz\\MailgunWebhooks\\MailgunWebhooksServiceProvider"
+      ]
+    }
+  }
+}
